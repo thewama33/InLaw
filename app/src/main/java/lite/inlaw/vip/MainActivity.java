@@ -186,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
             asw_view.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
         }
-
         asw_view.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); // Make a higher Priority for Site Rendering
         asw_view.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); // Stop Caching the Site
         asw_view.setVerticalScrollBarEnabled(false);
@@ -299,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
             webSettings.setDomStorageEnabled(true); //Java Script core Storage Enabled
             webSettings.setAppCacheEnabled(true);  // Enable caching the App
             webSettings.setSavePassword(true); //Saved Passwords Enabled
+
         } catch (Exception e) {
             e.printStackTrace();
         }
