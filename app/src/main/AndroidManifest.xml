@@ -53,12 +53,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https"
-                    android:host="inlaw.vip"
-                    android:pathPrefix="" /> <!-- if you want only a specific directory from your website to be opened in the app through external links -->
+                    android:host="inlaw.vip"/> <!-- if you want only a specific directory from your website to be opened in the app through external links -->
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="9452000" />
+            android:value="9452000"
+            tools:replace="android:value"/>
+
+
     </application>
 </manifest>

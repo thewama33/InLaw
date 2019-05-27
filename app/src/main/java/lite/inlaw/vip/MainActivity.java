@@ -38,6 +38,8 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.onesignal.OneSignal;
+
 import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
@@ -52,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-
+        OneSignal.startInit(MainActivity.this).init();
+        OneSignal.setLocationShared(true);
     }
 
     @Override
@@ -142,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         if (ASWP_PBAR) {
             asw_progress = findViewById(R.id.msw_progress);
